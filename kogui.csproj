@@ -54,6 +54,12 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+
+		<!-- ADICIONANDO  O SERVIÇO PARA O METODO ADDHTTPCLIENT //REQUISITO 2-->
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" /> 
+
+
+
 	</ItemGroup>
 
 	<ItemGroup>

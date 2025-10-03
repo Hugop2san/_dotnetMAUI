@@ -1,4 +1,10 @@
 ﻿using Microsoft.Extensions.Logging;
+using kogui.Services; // para chamar minha classe
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
+
+
+
 
 namespace kogui
 {
@@ -15,10 +21,13 @@ namespace kogui
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            //adicionando meu serviço
+            builder.Services.AddHttpClient<CorService>(); //REQUISITO 2
+
 
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

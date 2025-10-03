@@ -23,6 +23,8 @@ namespace kogui
 
             //adicionando meu serviço
             builder.Services.AddHttpClient<CorService>(); //REQUISITO 2
+            //Teste adicionando a main page
+            builder.Services.AddSingleton<MainPage>();
 
 
 

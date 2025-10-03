@@ -2,11 +2,14 @@
 using kogui.Services;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using kogui.Matriz;
+using System.Collections.Generic;
 
 namespace kogui
 {
     public partial class MainPage : ContentPage
     {
+
         private readonly CorService _corService;
         public ObservableCollection<ChaveCor> Chaves { get; set; } = new();
 
@@ -20,12 +23,13 @@ namespace kogui
             "#FFFF00", // yellow
             "#000000" // black 
         };
-
-        public MainPage(CorService corService)
+        public MainPage() : this(new CorService() ){}
+        public MainPage(CorService corService) 
         {
             InitializeComponent();
 
             _corService = corService;
+            
 
             //criando lista com ObservableCollection para uma lista dinamica
             Chaves = new ObservableCollection<ChaveCor>()  //REQUISITO 1
@@ -56,8 +60,8 @@ namespace kogui
             FraseLabel.Text = "Processando...";
             ColorCards.ItemsSource = null;
 
-            var cards = new System.Collections.Generic.List<(string Name, string Hex)>();
-            var componentes = new System.Collections.Generic.List<string>();
+            var cards = new List<(string Name, string Hex)>();
+            var componentes = new List<string>();
 
             foreach (var hex in hexordem)
             {
@@ -109,10 +113,77 @@ namespace kogui
         }
 
         //constrói frase com regras simples(não remover componentes especiais como "#" e "\" \"" ) 
-        private string BuildPhraseFromComponents(System.Collections.Generic.List<string> componentes)
+        private string BuildPhraseFromComponents(List<string> componentes)
+        {
+            // juntar com espaços, mantendo componentes como estão
+            var words = componentes.Where(s => s != null && s.Length > 0).ToList();
+            if (!words.Any()) 
+                return string.Empty;
+            
+            return string.Join(" ", words);
+        }
+
+
+        //Seção 3: matriz -> ASCII art -------------------
+
+                
+        // Ao clicar em gerar figura
+        private void OnGenerateFigureClicked(object sender, EventArgs e) 
         {
             
+            // parse e gerar ASCII art trocando pares por ' ' e ímpares por '#'
+            var ascii = ParseMatrixToAsciiArt( MatrizLinhaLinha.MatrizReal ); 
+            AsciiArtLabel.Text = ascii; 
+            
+            // opcional: colocar um texto inicial para o nome detectado
+            DetectedNameLabel.Text = "Nome do objeto: (escreva no campo e clique Salvar)"; 
+        }
+
+        private string ParseMatrixToAsciiArt(string matrixText) // REVISAR!
+        {
+
+            if (string.IsNullOrWhiteSpace(matrixText)) 
+                return string.Empty;
+
+            // separa linhas ignorando vazias
+            var lines = matrixText.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);           
+ 
+            var sb = new System.Text.StringBuilder();
+
+            foreach (var line in lines)
+            {
+                // Remove espaços em branco no início/fim de cada linha
+                string trimmedLine = line.Trim();
+
+                foreach (var ch in trimmedLine)
+                {
+                    if (!char.IsDigit(ch))
+                    {
+                        // ignora não-dígitos
+                        continue;
+                    }
+                    int d = ch - '0';
+
+                    // regra da frase: pares -> espaço, ímpares -> '#'
+                    sb.Append((d % 2 == 0) ? ' ' : '#');
+                }
+                sb.AppendLine(); // nova linha preservada
+
+            }
+            return sb.ToString();
+        }
+
+        // Salvar nome do objeto manualmente
+        private void OnSaveObjectNameClicked(object sender, EventArgs e) // REVISAR!
+        {
+            var name = ObjectNameEntry.Text; 
+
+            if (string.IsNullOrWhiteSpace(name)) 
+                return; DetectedNameLabel.Text = $"Nome do objeto: {name}";
+
+            DetectedNameLabel.Text = $"Nome do objeto: {name}";
         }
 
     }
+
 }

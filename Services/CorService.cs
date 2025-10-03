@@ -14,6 +14,7 @@ namespace kogui.Services
 
         private readonly HttpClient _http; 
         public CorService(HttpClient http) => _http = http;
+        public CorService() { } 
 
 
         public async Task<string> GetColorNameFromHexAsync(string hex)

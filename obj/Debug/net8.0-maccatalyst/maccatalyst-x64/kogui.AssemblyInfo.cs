@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("kogui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+c3deff46c9792177d05970d51b8836abab41e488")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7f47ea82b64ed13a35eea4ffcb0cc238f2f3cd0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("kogui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("kogui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

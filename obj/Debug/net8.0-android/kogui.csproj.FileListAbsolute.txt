@@ -1052,3 +1052,4 @@ C:\Users\SAMSUNG\source\repos\kogui\kogui\obj\Debug\net8.0-android\android\asset
 C:\Users\SAMSUNG\source\repos\kogui\kogui\obj\Debug\net8.0-android\android\assets\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\SAMSUNG\source\repos\kogui\kogui\obj\Debug\net8.0-android\android\assets\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
 C:\Users\SAMSUNG\source\repos\kogui\kogui\obj\Debug\net8.0-android\android\assets\System.Private.CoreLib.dll
+C:\Users\SAMSUNG\source\repos\kogui\kogui\obj\Debug\net8.0-android\kogui.sourcelink.json

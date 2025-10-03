@@ -66,7 +66,7 @@ Aplicativo mobile em .NET MAUI para Android que processa cores, matrizes e gera 
 
 <img width="479" height="841" alt="image" src="https://github.com/user-attachments/assets/f08e2d66-3458-4db2-9e90-fea317fb721d" />
 
-### Seção 3 - CHICARA - Arte ASCII
+### Seção 3 - XICARA - Arte ASCII
 
 <img width="389" height="456" alt="image" src="https://github.com/user-attachments/assets/30ddfbf3-e5eb-4867-a912-69d6472c38fd" />
 

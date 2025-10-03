@@ -1,9 +1,9 @@
-﻿ # 🎯 App Mobile - Processamento de Dados
+﻿ # App Mobile - Processamento de Dados
 
-## 📱 Sobre o Projeto
+## Sobre o Projeto
 Aplicativo mobile em .NET MAUI para Android que processa cores, matrizes e gera visualizações em 3 seções.
 
-## 🎯 Funcionalidades
+## Funcionalidades
 
 ### **Seção 1** 
 - Listagem de itens instanciados de classes
@@ -19,13 +19,13 @@ Aplicativo mobile em .NET MAUI para Android que processa cores, matrizes e gera 
 - Exibição da figura gerada
 - Identificação do objeto
 
-## 🛠️ Tecnologias
+## Tecnologias
 - **.NET MAUI 8.0** (Android)
 - **C#** & **XAML**
 - **The Color API**
 - **Arquitetura em camadas**
 
-## ✅ Requisitos Atendidos
+## Requisitos Atendidos
 - .NET MAUI Android com .NET 8
 - 3 seções na interface
 - Camada de serviço para API

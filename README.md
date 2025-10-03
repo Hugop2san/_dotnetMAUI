@@ -19,18 +19,48 @@ Aplicativo mobile em .NET MAUI para Android que processa cores, matrizes e gera 
 - Exibição da figura gerada
 - Identificação do objeto
 
-## Tecnologias
-- **.NET MAUI 8.0** (Android)
-- **C#** & **XAML**
-- **The Color API**
-- **Arquitetura em camadas**
+# Como Rodar 🚀 🚀 🚀
 
-## Requisitos Atendidos
+### Pré-requisitos:
+- ✅ Visual Studio 2022
+- ✅ .NET 8.0 SDK  
+- ✅ Android Studio (para emulador)
+- ✅ Dispositivo: **Pixel 7 - Android 15.0 - API 35**
+
+## Passos:
+
+### 1. **Clone o projeto:**
+```cmd
+- git clone https://github.com/seu-usuario/kogui.git
+- cd kogui
+```
+### 2. **Abra no Visual Studio:**
+```cmd
+- Abra kogui.sln
+- Configure como Android target
+```
+### 3. **Configure o emulador:**
+```cmd
+- No Visual Studio
+- Tools → Android → Android Device Manager
+- Crie um dispositivo: Pixel 7 - API 35
+```
+### 4. **Execute:**
+```cmd
+- Selecione o emulador Pixel 7
+- Pressione F5
+```
+## ✅ Requisitos Atendidos
+```cmd
 - .NET MAUI Android com .NET 8
 - 3 seções na interface
 - Camada de serviço para API
 - Processamento completo do fluxo
-
----
+```
 
 **Status**: ✅ Implementação completa
+
+## 🖼️ Imagens da Aplicação
+
+• ![Tela Principal](screenshots/main-screen.png)
+• ![Seção 3 - Arte ASCII](screenshots/section3-ascii-art.png)

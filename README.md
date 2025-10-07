@@ -31,7 +31,7 @@ Aplicativo mobile em .NET MAUI para Android que processa cores, matrizes e gera 
 
 ### 1. **Clone o projeto:**
 ```cmd
-- git clone https://github.com/seu-usuario/kogui.git
+- git clone https://github.com/seu-usuario/_dotnetMAUI.git
 - cd kogui
 ```
 ### 2. **Abra no Visual Studio:**
